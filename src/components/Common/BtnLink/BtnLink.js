@@ -23,7 +23,7 @@ export function BtnLink(props) {
         onChange={updateState}
       >
         {logo}
-        {title}
+        {/* {title} */}
       </Button>
     </div>
   );
