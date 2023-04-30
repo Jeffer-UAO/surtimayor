@@ -8,6 +8,7 @@ import {
   Promotion,
   Exclusive,
   FooterApp,
+  Separator,
 } from "@/components";
 
 import { BasicLayout } from "../../layouts";
@@ -46,7 +47,7 @@ export default function HomePage() {
     return (
       <>
         <BasicLayout>
-          <Advertisement />
+      <Separator />
         </BasicLayout>
 
         <ListCategories categories={categories} />

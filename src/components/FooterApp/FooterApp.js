@@ -18,7 +18,7 @@ export function FooterApp() {
         <BtnLink link={"/"} title={"HOME"} logo={<AiOutlineHome size={20} />} />
         <BtnLink
           link={"/featured"}
-          title={"EXCLUSIVO"}
+          title={"EXCL"}
           logo={<MdOutlineCategory size={20} />}
         />
 
@@ -28,14 +28,14 @@ export function FooterApp() {
         />
         <BtnLink
           link={"/ofert"}
-          title={"OFERTAS"}
+          title={"OFER"}
           logo={<MdOutlineLocalOffer size={20} />}
         />
         <BtnLink
           link={
             "https://mihogardistribuciones.catalogointeractivo.com.co/admin-dashboard/"
           }
-          title={"ADMIN"}
+          title={"ADMI"}
           logo={<CiUser size={20} />}
         />
       </div>

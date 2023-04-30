@@ -1,30 +1,15 @@
 .btnWhatsapp {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  
+
+  .paneluser {
     display: flex;
-    position: fixed;
-    bottom: -5px;
-  
+    background-color: rgba(255, 255, 255, 0.901);
+    padding-top: 5px;
+    width: 100vw;
     justify-content: center;
-  
-    .paneluser {
-      display: flex;
-      background-color: rgb(28, 166, 207);
-        padding-top: 5px;
-      width: 100vw;
-      justify-content: center;
-    }
-    .icon {
-      display: flex;
-      flex-direction: column;
-      margin-left: 2.5vh;
-      margin-right: 2.5vh;
-      align-items: center;
-  
-      color: rgb(255, 255, 255);
-    }
-    p {
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      color: rgb(255, 255, 255);
-    }
-  }
-  
+  } 
+}
