@@ -5,12 +5,13 @@
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
   img {
-    max-height: 80vh;
+    height: 80vh;
     object-fit: cover;
     object-position: center center;
   }
 
   .product {
+ 
     // background-color: rgba(233, 234, 234, 0.344);
     .title {
       padding: 10px;
@@ -55,8 +56,8 @@
     img {
       border-top-right-radius: 6px;
       border-top-left-radius: 6px;
-      max-height: 10rem;
-      object-fit: contain;
+      height: 8rem;
+      object-fit: cover;
       object-position: center center;
     }
 

@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import styles from "./Footer.module.scss";
 
-
 const categoriesCtrl = new Categories();
 
 export function Footer() {
@@ -26,19 +25,18 @@ export function Footer() {
     <div className={styles.footer}>
       <div>
         <div className={styles.content}>
-
-        <h6>SOBRE NOSOTROS</h6>
-        <div className={styles.link}>
-          <p>
-            <Link href="/about">Nosotros</Link>
-          </p>
-          <p>
-            <Link href="/contact">Contacto</Link>
-          </p>
-          {/* <p>
+          <h6>SOBRE NOSOTROS</h6>
+          <div className={styles.link}>
+            <p>
+              <Link href="/about">Nosotros</Link>
+            </p>
+            <p>
+              <Link href="/contact">Contacto</Link>
+            </p>
+            {/* <p>
             <Link href="/">Productos</Link>
           </p> */}
-        </div>
+          </div>
         </div>
 
         <h6>CATEGORÍAS</h6>
@@ -49,12 +47,13 @@ export function Footer() {
             </p>
           ))}
         </div>
-      </div>    
+      </div>
       <div>
         <p className={styles.copyright}>
-          DSITRIBUIDORA VALIZ Copyright © 2023. Todos los derechos reservados |
-          Desarrollado por:  Jeffer Quiñones<br/>
-         Versión 2.6.1
+          MI HOGAR DISTRIBUCIONES Copyright © 2023. Todos los derechos
+          reservados <br />
+          Desarrollado por: Jeffer Quiñones <br />
+          Versión 2.6.2
         </p>
       </div>
     </div>

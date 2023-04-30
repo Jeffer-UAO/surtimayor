@@ -23,7 +23,7 @@ export function FooterApp() {
         />
 
         <WhatsApp
-          phoneNumber="+57---"
+          phoneNumber="+573156665224"
           message="Hola, me gustaría obtener más información sobre sus productos."
         />
         <BtnLink
@@ -33,7 +33,7 @@ export function FooterApp() {
         />
         <BtnLink
           link={
-            "https://distribuidoravaliz.catalogointeractivo.com.co/admin-dashboard/"
+            "https://mihogardistribuciones.catalogointeractivo.com.co/admin-dashboard/"
           }
           title={"ADMIN"}
           logo={<CiUser size={20} />}

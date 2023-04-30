@@ -1,6 +1,5 @@
 import { BasicLayout } from "@/layouts";
-import { Advertisement, Separator } from "@/components";
-import { DetailProduct } from "@/components";
+import { DetailProduct, Advertisement, Separator } from "@/components";
 import { Footer } from "@/components";
 
 export default function ProductPage(props) {
@@ -9,7 +8,7 @@ export default function ProductPage(props) {
   return (
     <div>
       <BasicLayout>
-      <Separator />
+    <Separator />
       </BasicLayout>
 
       <DetailProduct product={product} relate={relate} />

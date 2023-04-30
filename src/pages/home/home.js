@@ -50,7 +50,7 @@ export default function HomePage() {
         </BasicLayout>
 
         <ListCategories categories={categories} />
-        <hr />
+   
         <Promotion products={products} />
         <hr />
         <Exclusive products={products} />
