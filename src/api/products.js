@@ -77,37 +77,4 @@ export class Products {
       throw error;
     }
   }
-
-  async addProductApi(data, token) {
-    try {
-      const formData = new FormData();
-      formData.append("name_extend", data.nombre);
-      formData.append("flag", data.grupo);
-      formData.append("slug", data.url);
-      formData.append("ref", data.referencia);
-      formData.append("description", data.descripcion);
-      formData.append("images", data.image);
-      formData.append("price1", data.precioact);
-      formData.append("price_old", data.precioant);
-      formData.append("active", data.active);
-      // formData.append('offer', data.nombre);
-      // formData.append('home', data.nombre);
-
-      const url = `${BASE_API}/api/products/`;
-      const params = {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      };
-
-      const response = await fetch(url, params);
-      const result = await response.json();
-      if (response.status !== 200) throw result;
-      return result;
-    } catch (error) {
-      throw error;
-    }
-  }
 }

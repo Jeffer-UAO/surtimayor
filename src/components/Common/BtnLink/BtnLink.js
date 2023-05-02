@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Spinner } from "reactstrap";
+import { Button } from "reactstrap";
 import { useRouter } from "next/router";
 import styles from "./BtnLink.module.scss";
 

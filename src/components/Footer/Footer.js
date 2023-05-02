@@ -50,11 +50,11 @@ export function Footer() {
       </div>
       <div>
         <p className={styles.copyright}>
-          MI HOGAR DISTRIBUCIONES Copyright © 2023. Todos los derechos
+          DISTRIBUCIONES Copyright © 2023. Todos los derechos
           reservados <br />
           Desarrollado por: Jeffer Quiñones <br />
           Cel: 300 530 9990
-          Versión 2.6.2
+          Versión 3.0.0
         </p>
       </div>
     </div>

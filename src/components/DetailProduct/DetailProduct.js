@@ -33,7 +33,8 @@ export function DetailProduct(props) {
               {productData.price1 !== null && <h6>$ {productData.price1}</h6>}
             </CardTitle>
             <p>{productData.description}</p>
-            <div>
+
+            <div className={styles.whatsapp}>
               <WhatsApp
                 phoneNumber="+573156665224"
                 message={
@@ -47,6 +48,7 @@ export function DetailProduct(props) {
                 }
               />
             </div>
+            
           </div>
         </div>
 

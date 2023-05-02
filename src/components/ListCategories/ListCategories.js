@@ -1,54 +1,20 @@
-import React, { useState } from "react";
 import { CardImg, CardTitle } from "reactstrap";
 import { map } from "lodash";
 import { BASE_NAME } from "@/config/constants";
-import { ModalBasic } from "../Common";
-import { FormCategory } from "./FormCategory";
-import { useAuth } from "@/hooks/useAuth";
 
 import styles from "./ListCategories.module.scss";
 import Link from "next/link";
 
 export function ListCategories(props) {
-  const { categories, title } = props;
-  const [showModal, setShowModal] = useState(false);
-
-  const { user } = useAuth();
-
-  // const goToCategory = (id) => {
-  //   console.log(id);
-  // };
-
-  const openCloseModal = () => setShowModal((prev) => !prev);
+  const { categories } = props;
 
   return (
     <div>
       <div className={styles.content}>
-        <h1>CATEGORÍAS</h1>
-
-        {user?.is_staff && (
-          <>
-            <div className={styles.category}>
-              <h2>
-                {title}{" "}
-                <ModalBasic
-                  titleButton={"Nueva Categoría"}
-                  title="Nueva Categoría"
-                  children={<FormCategory onClose={openCloseModal} />}
-                  showModal={showModal}
-                />
-              </h2>
-            </div>
-          </>
-        )}
-
         <div className={styles.list}>
           {map(categories, (category) => (
             <div key={category.id}>
-              <Link
-                href={`/products/${category.slug}`}
-                //  className={styles.skeleton}
-              >
+              <Link href={`/products/${category.slug}`}>
                 <CardImg
                   alt="Card image cap"
                   src={BASE_NAME + category.image}
@@ -62,19 +28,6 @@ export function ListCategories(props) {
                   </CardTitle>
                 </div>
               </Link>
-
-              {user?.is_staff && (
-                <ModalBasic
-                  data={"Categoría"}
-                  iconButton={true}
-                  children={
-                    <FormCategory
-                      onClose={openCloseModal}
-                      data={category.name}
-                    />
-                  }
-                />
-              )}
             </div>
           ))}
         </div>

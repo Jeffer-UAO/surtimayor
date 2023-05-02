@@ -1,17 +1,12 @@
 import { WhatsApp } from "../WhatsApp";
-
 import styles from "./FooterApp.module.scss";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineCategory } from "react-icons/md";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { CiUser } from "react-icons/ci";
-import Link from "next/link";
-import { useState } from "react";
-import { Spinner } from "reactstrap";
 import { BtnLink } from "../Common";
 
 export function FooterApp() {
-  const [isLoading, setIsLoading] = useState(false);
   return (
     <div className={styles.btnWhatsapp}>
       <div className={styles.paneluser}>

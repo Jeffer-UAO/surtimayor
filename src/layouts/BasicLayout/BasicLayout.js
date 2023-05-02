@@ -1,27 +1,15 @@
-import { TopBarAdmin, TopBar } from "../../components";
-import { useAuth } from "@/hooks/useAuth"; 
+import { TopBar } from "../../components";
+import styles from "./BasicLayout.module.scss";
 
 export function BasicLayout(props) {
-  const { user } = useAuth();
-  
-  const {
-    children,
-    isOpenSearch = false,
-  } = props;
+  const { children, isOpenSearch = false } = props;
 
   return (
     <>
-      {user?.is_staff ? (
-        <>
-          <TopBarAdmin isOpenSearch={isOpenSearch} />
-          {children}
-        </>
-      ) : (
-        <>
-          <TopBar isOpenSearch={isOpenSearch} />
-          {children}
-        </>
-      )}
+      <div className={styles.basicLayout}>
+        <TopBar isOpenSearch={isOpenSearch} />
+        {children}
+      </div>
     </>
   );
 }

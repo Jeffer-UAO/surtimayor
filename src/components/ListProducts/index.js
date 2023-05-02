@@ -1,2 +1,1 @@
-export * from "./FormProduct";
-export * from "./Listproducts"
+export * from "./Listproducts";

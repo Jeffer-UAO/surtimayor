@@ -1,6 +1,4 @@
 export { default } from "./product";
-
-import React, { useEffect } from "react";
 import { Products } from "@/api/products";
 
 export async function getServerSideProps(context) {

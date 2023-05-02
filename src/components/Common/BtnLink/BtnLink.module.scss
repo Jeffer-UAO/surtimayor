@@ -1,11 +1,14 @@
 .btnlink{
 
     button{
-        background-color: rgba(34, 8, 233, 0.564);
+        background-color: rgba(88, 234, 234, 0.997);
         height: 2.2rem;
         margin: 3px;
         border: 0;
         border-radius: 10px;
         width: 4.6rem;
+        -webkit-box-shadow: inset -1px 1px 39px 6px rgba(0,0,0,0.53);
+        -moz-box-shadow: inset -1px 1px 39px 6px rgba(0,0,0,0.53);
+        box-shadow: inset -1px 1px 39px 6px rgba(0,0,0,0.53);
     }
 }

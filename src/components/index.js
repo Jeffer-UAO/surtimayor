@@ -1,13 +1,8 @@
-// export * from "./Body";
 export * from "./Footer";
 export * from "./Layout";
-// export * from "./Menu";
  export * from "./ListCategories";
- export * from "./Advertisement";
  export * from "./ListProducts";
  export * from "./DetailProduct";
-export * from "./Auth";
-// export * from "./Menu";
  export * from "./AboutUs";
  export * from "./Retails";
  export * from "./WhatsApp";

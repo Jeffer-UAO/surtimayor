@@ -3,7 +3,6 @@ import { Categories } from "@/api/category";
 import { Products } from "@/api/products";
 import {
   ListCategories,
-  Advertisement,
   Footer,
   Promotion,
   Exclusive,
@@ -12,7 +11,6 @@ import {
 } from "@/components";
 
 import { BasicLayout } from "../../layouts";
-import { useAuth } from "@/hooks/useAuth";
 
 const categoriesCtrl = new Categories();
 const productsCtrl = new Products();
@@ -47,29 +45,27 @@ export default function HomePage() {
     return (
       <>
         <BasicLayout>
-      <Separator />
+          <Separator />
+          <Separator />
+          <ListCategories categories={categories} />
+
+          <Promotion products={products} />
+          <hr />
+          <Exclusive products={products} />
+
+          <FooterApp />
+          <Footer />
         </BasicLayout>
-
-        <ListCategories categories={categories} />
-   
-        <Promotion products={products} />
-        <hr />
-        <Exclusive products={products} />
-
-        <FooterApp />
-        <Footer />
       </>
     );
   } else {
     return (
       <>
         <BasicLayout>
-          <Advertisement />
+          <ListCategories categories={categories} />
+          <FooterApp />
+          <Footer />
         </BasicLayout>
-
-        <ListCategories categories={categories} />
-        <FooterApp />
-        <Footer />
       </>
     );
   }

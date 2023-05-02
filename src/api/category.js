@@ -32,28 +32,4 @@ export class Categories {
     }
   }
 
-  async addCategoryApi(data, token) {
-    try {
-      const formData = new FormData();
-      formData.append("name", data.name);
-      formData.append("slug", data.slug);
-      formData.append("image", data.image);
-
-      const url = `${BASE_API}/api/category/`;
-      const params = {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      };
-
-      const response = await fetch(url, params);
-      const result = await response.json();
-      if (response.status !== 200) throw result;
-      return result;
-    } catch (error) {
-      throw error;
-    }
-  }
 }
