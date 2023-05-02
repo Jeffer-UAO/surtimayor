@@ -16,7 +16,7 @@ export function TopBar() {
             <p className={styles.text}>CATÁLOGO</p>
             <p className={styles.num}>2023</p>
           </div>
-          <p className={styles.name}>DISTRIBUCIONES</p>
+          <p className={styles.name}>DISTRIBUCIONES MELENITAS</p>
           <p className={styles.extra}>DESPACHOS A TODA COLOMBIA</p>
         </div>
       </div>
