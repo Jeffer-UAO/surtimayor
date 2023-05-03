@@ -78,8 +78,7 @@ export function DetailProduct(props) {
               </div>
             ))}
           </div>
-        </div>
-        <FooterApp />
+        </div>     
       </div>
     );
   } else {

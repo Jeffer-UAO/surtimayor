@@ -1,5 +1,5 @@
 import { BasicLayout } from "@/layouts";
-import { DetailProduct, Separator } from "@/components";
+import { DetailProduct, FooterApp, Separator } from "@/components";
 import { Footer } from "@/components";
 
 export default function ProductPage(props) {
@@ -11,7 +11,7 @@ export default function ProductPage(props) {
         <Separator />
         <Separator />
         <DetailProduct product={product} relate={relate} />
-
+        <FooterApp />
         <Footer />
       </BasicLayout>
     </div>
