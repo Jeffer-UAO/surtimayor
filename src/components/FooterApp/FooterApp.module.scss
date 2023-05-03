@@ -4,8 +4,6 @@
   bottom: 0px;
   justify-content: center;
 
-  
-
   .paneluser {
     border-radius: 10px;
     display: flex;
@@ -15,9 +13,8 @@
     justify-content: center;
     margin: 10px;
 
-    -webkit-box-shadow: -1px 1px 15px 7px rgba(0,0,0,0.53);
-  -moz-box-shadow: -1px 1px 15px 7px rgba(0,0,0,0.53);
-  box-shadow: -1px 1px 15px 7px rgba(0,0,0,0.53);
-    
-  } 
+    -webkit-box-shadow: -1px 1px 15px 7px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: -1px 1px 15px 7px rgba(0, 0, 0, 0.53);
+    box-shadow: -1px 1px 15px 7px rgba(0, 0, 0, 0.53);
+  }
 }
