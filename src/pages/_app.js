@@ -6,8 +6,8 @@ import "../scss/global.scss";
 export default function App(props) {
   const { Component, pageProps } = props;
 
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
+  useEffect(() => {   
+    if ("serviceWorker" in navigator) {      
       window.addEventListener("load", function () {
         navigator.serviceWorker.register("/sw.js").then(
           function (registration) {
@@ -19,6 +19,7 @@ export default function App(props) {
           function (err) {
             console.log("ServiceWorker registration failed: ", err);
           }
+         
         );
       });
     }
