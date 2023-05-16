@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Next-PWA",
-  "short_name": "Next-PWA",
-  "description": "A Demo for Next-PWA",
+  "name": "Nombre",
+  "short_name": "Nombre corto",
+  "description": "Descripcion",
   "icons": [
     {
       "src": "/icon-192x192.png",
