@@ -1,4 +1,4 @@
-import { TopBar } from "../../components";
+import { Footer, FooterApp, Separator, TopBar } from "../../components";
 import styles from "./BasicLayout.module.scss";
 
 export function BasicLayout(props) {
@@ -8,7 +8,12 @@ export function BasicLayout(props) {
     <>
       <div className={styles.basicLayout}>
         <TopBar isOpenSearch={isOpenSearch} />
+        <Separator />
+        <Separator />
         {children}
+
+        <FooterApp />
+        <Footer />
       </div>
     </>
   );

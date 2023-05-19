@@ -1,72 +1,59 @@
-import React, { useEffect, useState } from "react";
-import { Categories } from "@/api/category";
-import { Products } from "@/api/products";
-import {
-  ListCategories,
-  Footer,
-  Promotion,
-  Exclusive,
-  FooterApp,
-  Separator,
-} from "@/components";
-
+import { useState } from "react";
+import { DetailProduct, ListCategories, Listproducts, Separator } from "@/components";
 import { BasicLayout } from "../../layouts";
+import { useCategoriesToProducts } from "@/hooks";
 
-const categoriesCtrl = new Categories();
-const productsCtrl = new Products();
 
 export default function HomePage() {
-  const [categories, setCategories] = useState(null);
-  const [products, setProducts] = useState(null);
+  const { categories, products } = useCategoriesToProducts();
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await categoriesCtrl.getAll();
-        setCategories(response);
-      } catch (error) {
-        console.error(error);
-      }
-    })();
-  }, []);
+  const [categoryPage, setCategoryPage] = useState(true);
+  const [productPage, setProductPage] = useState(false);
+  const [detailProductPage, setDetailProductPage ] = useState(false);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await productsCtrl.getProductByOfertAndExclusive();
-        setProducts(response);
-      } catch (error) {
-        console.error(error);
-      }
-    })();
-  }, []);
+  const [ category, setCategory ] = useState("");
+  const [detail, setDetail ] = useState("");
+  const [ flag, setFlag ] = useState("");
 
-  if (products !== null) {
-    return (
-      <>
-        <BasicLayout>
-          <Separator />
-          <Separator />
-          <ListCategories categories={categories} />
+  const chagePage = (categoryData) => {
+    setCategoryPage(false);
+    setProductPage(true);
+    setDetailProductPage(false);
 
-          <Promotion products={products} />
-          <hr />
-          <Exclusive products={products} />
-
-          <FooterApp />
-          <Footer />
-        </BasicLayout>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <BasicLayout>
-          <ListCategories categories={categories} />
-          <FooterApp />
-          <Footer />
-        </BasicLayout>
-      </>
-    );
+    setCategory(categoryData);
   }
+  
+  const getDetailProduct = (detailData) => {
+    setCategoryPage(false);
+    setProductPage(false);
+    setDetailProductPage(true);
+
+    setDetail(detailData);   
+
+    getRelateData(detailData.productData.flag);
+  }
+
+  const getRelateData = (flag) =>{
+    const result = products.filter(
+      (product) => product.productData.flag === flag
+    );
+
+    setFlag(result);
+    // setLoading(false);
+
+  }
+
+  return (
+    <>
+      <BasicLayout>
+     
+        {categoryPage && <ListCategories categories={categories} chagePage={chagePage} />}
+
+        {productPage && <Listproducts category={category} getDetailProduct={getDetailProduct} />}
+
+        {detailProductPage && <DetailProduct product={detail} relate={flag} />}
+
+      </BasicLayout>
+    </>
+  );
 }

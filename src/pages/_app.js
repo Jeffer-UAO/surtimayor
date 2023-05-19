@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import NextNprogress from "nextjs-progressbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../scss/global.scss";
+import { CategoryProvider } from "@/contexts/CategoryContext";
 
 export default function App(props) {
   const { Component, pageProps } = props;
 
-  useEffect(() => {   
-    if ("serviceWorker" in navigator) {      
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
         navigator.serviceWorker.register("/sw.js").then(
           function (registration) {
@@ -19,7 +20,6 @@ export default function App(props) {
           function (err) {
             console.log("ServiceWorker registration failed: ", err);
           }
-         
         );
       });
     }
@@ -33,7 +33,9 @@ export default function App(props) {
         stopDelayMs={200}
         height={10}
       />
-      <Component {...pageProps} />
+      <CategoryProvider>
+        <Component {...pageProps} />
+      </CategoryProvider>
     </>
   );
 }

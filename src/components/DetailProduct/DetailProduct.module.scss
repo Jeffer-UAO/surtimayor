@@ -5,7 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
   img {
-    height: 66vh;
+    height: 70vh;
     object-fit: cover;
     object-position: center center;
   }
@@ -40,6 +40,8 @@
     p {
       margin-top: 50px;
       font-size: 1.2rem;
+      background-color: white;
+      border-radius: 0.5rem;
     }
   }
 }

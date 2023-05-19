@@ -5,8 +5,10 @@ import { MdOutlineCategory } from "react-icons/md";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { CiUser } from "react-icons/ci";
 import { BtnLink } from "../Common";
+import { useCategoriesToProducts } from "@/hooks";
 
 export function FooterApp() {
+
   return (
     <div className={styles.btnWhatsapp}>
       <div className={styles.paneluser}>

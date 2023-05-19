@@ -1,20 +1,19 @@
 import { CardImg, CardTitle } from "reactstrap";
 import { map } from "lodash";
 import { BASE_NAME } from "@/config/constants";
-
 import styles from "./ListCategories.module.scss";
-import Link from "next/link";
+
 
 export function ListCategories(props) {
-  const { categories } = props;
+  const { categories, chagePage } = props;
 
   return (
-    <div>
+    <div>     
       <div className={styles.content}>
         <div className={styles.list}>
           {map(categories, (category) => (
-            <div key={category.id}>
-              <Link href={`/products/${category.slug}`}>
+            <div key={category.id} onClick={() => chagePage(category)}>
+             
                 <CardImg
                   alt="Card image cap"
                   src={BASE_NAME + category.image}
@@ -27,7 +26,7 @@ export function ListCategories(props) {
                     <h6>ver más</h6>
                   </CardTitle>
                 </div>
-              </Link>
+      
             </div>
           ))}
         </div>

@@ -6,7 +6,7 @@ import { map } from "lodash";
 
 export function Exclusive(props) {
   const { products } = props;
-
+  console.log("Encantador");
   return (
     <div className={styles.content}>
       <h5>Te va a encantar</h5>

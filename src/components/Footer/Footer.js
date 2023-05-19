@@ -9,7 +9,9 @@ const categoriesCtrl = new Categories();
 
 export function Footer() {
   const [categories, setCategories] = useState(null);
+  console.log("Pie general");
 
+  
   useEffect(() => {
     (async () => {
       try {

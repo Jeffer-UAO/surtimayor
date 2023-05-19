@@ -32,6 +32,20 @@ export class Products {
     }
   }
 
+  async getProductsCategoryAll() {
+    try {
+      const url = `${BASE_API}/api/product_category/`;
+      const response = await fetch(url);
+      const result = await response.json();
+
+      if (response.status !== 200) throw result;
+
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  }
+
   async getProductBySlug(slug) {
     try {
       const productFilter = `slug=${slug}`;

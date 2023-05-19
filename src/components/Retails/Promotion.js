@@ -6,6 +6,8 @@ import { map } from "lodash";
 
 export function Promotion(props) {
   const { products } = props;
+
+  console.log("Promocion");
   return (
     <div className={styles.content}>
       <h5>Promociones</h5>
