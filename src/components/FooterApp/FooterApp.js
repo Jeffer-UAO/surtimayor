@@ -5,14 +5,15 @@ import { MdOutlineCategory } from "react-icons/md";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { CiUser } from "react-icons/ci";
 import { BtnLink } from "../Common";
-import { useCategoriesToProducts } from "@/hooks";
 
-export function FooterApp() {
+
+export function FooterApp(props) {
+  const { homePage } = props;
 
   return (
     <div className={styles.btnWhatsapp}>
       <div className={styles.paneluser}>
-        <BtnLink link={"/"} title={"HOME"} logo={<AiOutlineHome size={20} />} />
+        <BtnLink homePage={homePage} link={"/"} title={"HOME"} logo={<AiOutlineHome size={20} />} />
         <BtnLink
           link={"/featured"}
           title={"EXCL"}

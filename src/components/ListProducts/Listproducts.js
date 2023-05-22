@@ -45,17 +45,12 @@ export function Listproducts(props) {
             {map(productsData, (product, index) => (
               <div key={index} className={styles.list__product}>
                 <div>
-
-
-             
                     <CardImg
                       alt="Card image cap"
                       src={BASE_NAME + product.productData.images}
                       onClick={()=>{getDetailProduct(product)}}
                     />
-         
-
-
+ 
                   <div className={styles.product}>
                     <CardTitle className={styles.title}>
                       <h5>{product.productData.name_extend}</h5>

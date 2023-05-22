@@ -12,7 +12,7 @@ export function BasicLayout(props) {
         <Separator />
         {children}
 
-        <FooterApp />
+      
         <Footer />
       </div>
     </>

@@ -15,9 +15,7 @@ export default function OfertPage(props) {
 
   return (
     <>
-      <BasicLayout>
-        <Separator />
-        <Separator />
+      <BasicLayout>    
         {hasProduct ? (
           <Promotion products={products} />
         ) : (
@@ -26,8 +24,7 @@ export default function OfertPage(props) {
           />
         )}
 
-        <FooterApp />
-        <Footer />
+        <FooterApp />    
       </BasicLayout>
     </>
   );

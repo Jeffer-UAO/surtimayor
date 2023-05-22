@@ -15,9 +15,7 @@ export default function FeaturedPage(props) {
 
   return (
     <>
-      <BasicLayout>
-        <Separator />
-        <Separator />
+      <BasicLayout>     
         {hasProduct ? (
           <Exclusive products={products} />
         ) : (
@@ -25,9 +23,7 @@ export default function FeaturedPage(props) {
             title={"Uppss... en este momento no hay productos Destacados"}
           />
         )}
-
-        <FooterApp />
-        <Footer />
+        <FooterApp />   
       </BasicLayout>
     </>
   );

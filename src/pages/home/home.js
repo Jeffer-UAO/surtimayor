@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DetailProduct, ListCategories, Listproducts, Separator } from "@/components";
+import { DetailProduct, FooterApp, ListCategories, Listproducts } from "@/components";
 import { BasicLayout } from "../../layouts";
 import { useCategoriesToProducts } from "@/hooks";
 
@@ -14,6 +14,8 @@ export default function HomePage() {
   const [ category, setCategory ] = useState("");
   const [detail, setDetail ] = useState("");
   const [ flag, setFlag ] = useState("");
+
+  window.scrollTo(0, 0);
 
   const chagePage = (categoryData) => {
     setCategoryPage(false);
@@ -32,6 +34,13 @@ export default function HomePage() {
 
     getRelateData(detailData.productData.flag);
   }
+
+  const homePage = () => {
+    setCategoryPage(true);
+    setProductPage(false);
+    setDetailProductPage(false);
+  }
+
 
   const getRelateData = (flag) =>{
     const result = products.filter(
@@ -53,6 +62,7 @@ export default function HomePage() {
 
         {detailProductPage && <DetailProduct product={detail} relate={flag} />}
 
+        <FooterApp homePage={homePage} />
       </BasicLayout>
     </>
   );

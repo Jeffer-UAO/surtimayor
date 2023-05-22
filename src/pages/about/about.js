@@ -4,12 +4,9 @@ import { BasicLayout } from "../../layouts";
 export default function AboutHome() {
   return (
     <>
-      <BasicLayout>
-        <Separator />
-        <Separator />
+      <BasicLayout>      
         <AboutUs />
-        <FooterApp />
-        <Footer />
+        <FooterApp />   
       </BasicLayout>
     </>
   );

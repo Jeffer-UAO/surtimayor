@@ -1,16 +1,21 @@
 .listProduct{
   padding-top: 1rem;
+  width: 100%;
+  h4{
+    text-transform: uppercase;
+  }
 }
 
 .list {
-  padding: 10px;
+  padding: 0.5rem;
+  // width: clamp(100px, 100%, 800px);
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 
   background-color: rgb(241, 241, 241);
 
-  &__product {
+  &__product {   
     background-color: rgb(255, 255, 255);
     position: relative;  
     border-radius: 5px;
@@ -33,6 +38,7 @@
 
     img {
       height: 200px;
+    
       border-top-right-radius: 5px;
       border-top-left-radius: 5px;
       object-fit: cover;

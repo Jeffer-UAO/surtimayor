@@ -4,11 +4,8 @@ import { BasicLayout } from "../../layouts";
 export default function ContactHome() {
   return (
     <>
-      <BasicLayout>
-        <Separator />
+      <BasicLayout>   
         <Contact />
-
-        <Footer />
       </BasicLayout>
     </>
   );
