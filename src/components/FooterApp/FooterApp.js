@@ -31,7 +31,7 @@ export function FooterApp(props) {
         />
         <BtnLink
           link={
-            "https://mihogardistribuciones.catalogointeractivo.com.co/admin-dashboard/"
+            "https://surtimayor.catalogointeractivo.com.co/admin-dashboard/"
           }
           title={"ADMI"}
           logo={<CiUser size={20} />}
