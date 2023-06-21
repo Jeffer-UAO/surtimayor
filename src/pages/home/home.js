@@ -1,21 +1,29 @@
 import { useState } from "react";
 import { DetailProduct, FooterApp, ListCategories, Listproducts } from "@/components";
 import { BasicLayout } from "../../layouts";
-import { useCategoriesToProducts } from "@/hooks";
+import { useCategoriesToProducts, useCart } from "@/hooks";
 
 
 export default function HomePage() {
   const { categories, products } = useCategoriesToProducts();
+  const { addCart } = useCart();
 
   const [categoryPage, setCategoryPage] = useState(true);
   const [productPage, setProductPage] = useState(false);
   const [detailProductPage, setDetailProductPage ] = useState(false);
+
+  const [loading, setLoading] = useState(false);
 
   const [ category, setCategory ] = useState("");
   const [detail, setDetail ] = useState("");
   const [ flag, setFlag ] = useState("");
 
   window.scrollTo(0, 0);
+
+  const addCartWrapper = (itemId) => {
+    setLoading(true);
+    addCart(itemId)
+  }
 
   const chagePage = (categoryData) => {
     setCategoryPage(false);
@@ -58,7 +66,7 @@ export default function HomePage() {
      
         {categoryPage && <ListCategories categories={categories} chagePage={chagePage} />}
 
-        {productPage && <Listproducts category={category} getDetailProduct={getDetailProduct} />}
+        {productPage && <Listproducts category={category} getDetailProduct={getDetailProduct} addCartWrapper={addCartWrapper}/>}
 
         {detailProductPage && <DetailProduct product={detail} relate={flag} />}
 

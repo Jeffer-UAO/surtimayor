@@ -2,7 +2,7 @@ import { WhatsApp } from "../WhatsApp";
 import styles from "./FooterApp.module.scss";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineCategory } from "react-icons/md";
-import { MdOutlineLocalOffer } from "react-icons/md";
+import { BsCart3 } from "react-icons/bs";
 import { CiUser } from "react-icons/ci";
 import { BtnLink } from "../Common";
 
@@ -27,7 +27,7 @@ export function FooterApp(props) {
         <BtnLink
           link={"/ofert"}
           title={"OFER"}
-          logo={<MdOutlineLocalOffer size={20} />}
+          logo={<BsCart3 size={20} />}
         />
         <BtnLink
           link={

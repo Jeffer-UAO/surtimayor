@@ -3,6 +3,7 @@ import NextNprogress from "nextjs-progressbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../scss/global.scss";
 import { CategoryProvider } from "@/contexts/CategoryContext";
+import { CartProvider } from "@/contexts";
 
 export default function App(props) {
   const { Component, pageProps } = props;
@@ -33,9 +34,11 @@ export default function App(props) {
         stopDelayMs={200}
         height={10}
       />
-      <CategoryProvider>
-        <Component {...pageProps} />
-      </CategoryProvider>
+      <CartProvider>
+        <CategoryProvider>
+          <Component {...pageProps} />
+        </CategoryProvider>
+      </CartProvider>
     </>
   );
 }

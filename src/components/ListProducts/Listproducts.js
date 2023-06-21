@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { NotFound } from "../NotFound";
 
 export function Listproducts(props) {
-  const { category, getDetailProduct } = props;
+  const { category, getDetailProduct, addCartWrapper } = props;
   const { products } = useCategoriesToProducts("");
   const [productsData, setProductsData] = useState("");
   const [loading, setLoading] = useState(true);
@@ -54,6 +54,9 @@ export function Listproducts(props) {
                   <div className={styles.product}>
                     <CardTitle className={styles.title}>
                       <h5>{product.productData.name_extend}</h5>
+                      <button onClick={ ()=> addCartWrapper(product.productData.codigo)}>
+                        addCart
+                      </button>
                     </CardTitle>
 
                     <div className={styles.title}>
